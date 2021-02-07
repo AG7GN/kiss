@@ -106,7 +106,7 @@ class KISS(object):
 
         read_buffer = bytes()
 
-        while 1:
+        while self.interface:
             read_data = self._read_handler(read_bytes)
 
             if read_data is not None and len(read_data):
@@ -220,6 +220,7 @@ class TCPKISS(KISS):
     def stop(self):
         if self.interface:
             self.interface.shutdown(socket.SHUT_RDWR)
+            self.interface = None
 
     def start(self):
         """
@@ -291,6 +292,7 @@ class SerialKISS(KISS):
         except AttributeError:
             if self.interface and self.interface._isOpen:
                 self.interface.close()
+        self.interface = None
 
     def start(self, **kwargs):
         """

@@ -84,6 +84,8 @@ Greg Albrecht W2GMD oss@undef.net
 
 http://ampledata.org/
 
+Modified by Steve Magnuson AG7GN to make read() thread safe.
+
 Copyright
 =========
 Copyright 2017 Greg Albrecht and Contributors

@@ -12,7 +12,9 @@ Versions
 
 Installation
 ============
-Install from pypi using pip: ``pip install kiss``
+To install original kiss module via from pypi using pip: ``pip install kiss``
+
+To install AG7GN's fork: ``sudo -H pip3 install --upgrade git+git://github.com/AG7GN/kiss.git``
 
 
 Usage Examples

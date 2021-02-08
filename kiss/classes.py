@@ -115,7 +115,7 @@ class KISS(object):
 
                 frames = []
 
-                split_data = read_data.split(kiss.FEND.decode('utf-8'))
+                split_data = read_data.split(kiss.FEND).decode('utf-8')
                 fends = len(split_data)
 
                 self._logger.debug(

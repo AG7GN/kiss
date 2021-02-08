@@ -219,7 +219,10 @@ class TCPKISS(KISS):
 
     def stop(self):
         if self.interface:
-            self.interface.shutdown(socket.SHUT_RDWR)
+            try:
+                self.interface.shutdown(socket.SHUT_RDWR)
+            except OSError:  # Socket already closed
+                pass
             self.interface = None
 
     def start(self):

@@ -39,7 +39,7 @@ setuptools.setup(
     package_data={'': ['LICENSE']},
     package_dir={'kiss': 'kiss'},
     license=open('LICENSE').read(),
-    long_description=open('README.rst').read(),
+    long_description=open('README.rst', encoding='utf-8').read(),
     url='https://github.com/ampledata/kiss',
     zip_safe=False,
     setup_requires=[
